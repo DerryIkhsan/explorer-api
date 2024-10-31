@@ -14,7 +14,7 @@ class FolderController extends Controller
 {
     //
     public function index(){
-        $folder = Folder::get();
+        $folder = Folder::where('parent_id', '0')->get();
 
         if($folder){
             return new ApiResources(true, 'success get folder', $folder);

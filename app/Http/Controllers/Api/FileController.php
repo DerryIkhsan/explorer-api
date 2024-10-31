@@ -43,7 +43,7 @@ class FileController extends Controller
 
         //upload file
         $file = $request->file('file');
-        $file->storeAs('public/posts/', $file->hashName());
+        $file->storeAs('public/files/', $file->hashName());
 
         //create file
         $file = File::create([
