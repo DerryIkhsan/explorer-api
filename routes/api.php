@@ -3,7 +3,6 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Api\FolderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +16,4 @@ use App\Http\Controllers\Api\FolderController;
 */
 
 Route::apiResource('/folders', App\Http\Controllers\Api\FolderController::class);
+Route::apiResource('/files', App\Http\Controllers\Api\FileController::class);
