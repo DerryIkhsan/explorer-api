@@ -2,17 +2,16 @@
 
 namespace App\Http\Resources;
 
-use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class ApiResources extends JsonResource
 {
     public $status;
     public $message;
-    public $data;
+    public $resource;
 
-    public function __construct($status, $message, $data){
-        parent::__construct($data);
+    public function __construct($status, $message, $resource){
+        parent::__construct($resource);
         $this->status = $status;
         $this->message = $message;
     }
@@ -22,12 +21,12 @@ class ApiResources extends JsonResource
      *
      * @return array<string, mixed>
      */
-    public function toArray(Request $request): array
+    public function toArray($request)
     {
         return [
             'status' => $this->status,
             'message' => $this->message,
-            'data' => $this->data,
+            'data' => $this->resource,
         ];
     }
 }
