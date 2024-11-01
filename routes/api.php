@@ -15,5 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::apiResource('/folders', App\Http\Controllers\Api\FolderController::class);
 Route::apiResource('/files', App\Http\Controllers\Api\FileController::class);
+Route::apiResource('/folders', App\Http\Controllers\Api\FolderController::class);
+Route::apiResource('/subfolders', App\Http\Controllers\Api\SubFolderController::class);
